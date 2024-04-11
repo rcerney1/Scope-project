@@ -13,6 +13,10 @@ arrowRestSum(0); // => 0
 
 // Your code here 
 
+const arrowRestSum = (...nums) => nums.reduce((acc, cur) => acc + cur, 0); 
+
+console.log(arrowRestSum(3,5,6), arrowRestSum(1, 2, 3, 4, 5, 6, 7, 8, 9))
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
