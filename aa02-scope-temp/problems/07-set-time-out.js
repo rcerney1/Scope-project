@@ -18,8 +18,17 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+function partyFunc () {
+  console.log("Party time!")
+}
 
+
+function funcTimer(time, cb) {
+  setTimeout(cb, time)
+}  
+ 
+funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
