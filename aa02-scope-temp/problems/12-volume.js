@@ -13,7 +13,35 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+const recVolume = function (height) {
+  let count = 1;
+  let length;
+  let width;
+  let h = height;
+
+  return function rec (ele) {
+
+    if (count === 1) {
+     
+      length = ele;
+      count++;
+      return rec;
+
+    } else if (count === 2) {
+      width = ele;
+      count++;
+      return h*length*width;
+
+    } else {
+      return h*length*width;
+    }
+  }
+};
+
+let table1 = recVolume(5); // returns a function
+table1(4); // returns a function
+console.log(table1(3)); // prints 60
+console.log(table1(145)); // STILL prints 60
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
