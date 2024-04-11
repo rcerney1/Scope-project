@@ -19,7 +19,19 @@ divideByFive(50); // returns 10
 ***********************************************************************/
 
 // Your code here 
+const dynamicDivide = (divisor) => {
+  return (arg) => arg / divisor;
+}
 
+
+const halfer = dynamicDivide(2); // returns a function
+console.log(halfer(20)); // returns 10
+
+const divideByThree = dynamicDivide(3);
+console.log(divideByThree(40)); // returns 10
+
+const  divideByFive = dynamicDivide(5);
+divideByFive(50); // returns 10
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

@@ -24,6 +24,30 @@ console.log(smoothie2("pineapple"));
 
 // Your code here 
 
+function smoothieMachine() {
+  let string ="I'm having a smoothie "
+  let count = 0;
+  return (...ingredients) => {
+    if(count === 0) {
+      ingredients.forEach(ele => string += 'with ' + ele)
+      count++;
+      return string;
+    } else {
+      ingredients.forEach(ele => string += ' and ' + ele)
+      return string;
+    }
+  }  
+} 
+
+let smoothie1 = smoothieMachine();
+
+console.log(smoothie1("milk"));
+// prints "I'm having a smoothie with milk"
+console.log(smoothie1("kale", "spinach"));
+// prints "I'm having a smoothie with milk and kale and spinach"
+console.log(smoothie1("honey", "pears", "berries"));
+// prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = smoothieMachine;
