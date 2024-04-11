@@ -17,7 +17,23 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 ***********************************************************************/
 
 // Your code here 
+const interrupter = (interruptingWord) => {
 
+  return function rude(sentence) {
+    let words = sentence.split(' ');
+    let newArr = [];
+    words.forEach(ele => {newArr.push(ele, interruptingWord)})
+    newArr.pop();
+    return newArr.join(' ');
+  }
+}
+
+
+
+
+
+let rudePerson2 = interrupter("yo"); // => returns a function
+console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
