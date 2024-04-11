@@ -15,7 +15,16 @@ hidden2(); // returns 1
 
 ***********************************************************************/
 
-// Your code here 
+const hiddenCounter = function () {
+  count = 0;
+
+  return function (ele) {
+    count++;
+    return count;
+  }
+};
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
