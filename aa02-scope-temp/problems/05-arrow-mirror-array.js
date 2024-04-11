@@ -11,9 +11,15 @@ arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b
 ***********************************************************************/
 
 // Your code here 
+const arrowMirrorArray = array =>  [...array, ...array.reverse()];
+  
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
+
+console.log(arrowMirrorArray([1,2,3])); // => [ 1, 2, 3, 3, 2, 1 ]
+arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 try {
   module.exports = arrowMirrorArray;
 } catch (e) {
